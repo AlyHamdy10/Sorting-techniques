@@ -81,6 +81,17 @@ def insertion_sort(arr):
         arr[hole] = key
 
 
+def selection_sort(arr):
+    for i in range(len(arr) - 1):  # loop around all elements except last one
+        i_min = i
+        # compares the current key with every element in the array to check if it's the smallest or not
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[i_min]:     # if not replace the i_min with the smaller element index
+                i_min = j
+        if i != i_min:  # if a change occured in the i_min, swap
+            arr[i], arr[i_min] = arr[i_min], arr[i]
+
+
 def generate_unsorted(size):
     arr = [0] * size
     for i in range(size):
@@ -91,7 +102,7 @@ def generate_unsorted(size):
 arr = [2, 0, 6, 1, 4, 7, 5, 8, 9,  3]
 print(arr)
 begin = time.time()
-insertion_sort(arr)
+selection_sort(arr)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
