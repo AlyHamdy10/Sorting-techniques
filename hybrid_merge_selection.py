@@ -1,4 +1,5 @@
 from random import randint
+import time
 
 
 def merge(arr, left, mid, right):
@@ -69,5 +70,23 @@ def generate_unsorted(size):
 
 size = int(input("Enter te array's size:"))
 arr = generate_unsorted(size)
+
+# hybrid merge selection sort
+t_arr = arr.copy
+begin = time.time()
 merge_sort(arr, 0, size-1, 6)
-print(arr)
+time.sleep(1)
+end = time.time()
+exec_time = end - begin
+print("Running time for Hybrid Merge Selection Sort is \t" +
+      str(exec_time*1000) + " ms")
+
+# merge sort
+t_arr = arr.copy
+begin = time.time()
+merge_sort(arr, 0, size-1, 0)
+time.sleep(1)
+end = time.time()
+exec_time = end - begin
+print("Running time for Merge Sort is \t\t\t\t" +
+      str(exec_time*1000) + " ms")
