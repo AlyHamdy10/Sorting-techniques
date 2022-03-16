@@ -95,16 +95,41 @@ def selection_sort(arr):
 def generate_unsorted(size):
     arr = [0] * size
     for i in range(size):
-        arr[i] = randint(0, 100)
+        arr[i] = randint(0, size)
     return arr
 
 
-arr = [2, 0, 6, 1, 4, 7, 5, 8, 9,  3]
-print(arr)
+size = int(input("Enter te array's size:"))
+arr = generate_unsorted(size)
+# Quick Sort
+t_array = arr.copy
+begin = time.time()
+quick_sort(arr, 0, size-1)
+time.sleep(1)
+end = time.time()
+exec_time = end - begin
+print("Running time for Quick Sort is \t\t" + str(exec_time*1000) + " ms")
+# Merge Sort
+t_array = arr.copy
+begin = time.time()
+merge_sort(arr, 0, size-1)
+time.sleep(1)
+end = time.time()
+exec_time = end - begin
+print("Running time for Merge Sort is \t\t" + str(exec_time*1000) + " ms")
+# Selection Sort
+t_array = arr.copy
 begin = time.time()
 selection_sort(arr)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
-print(exec_time)
-print(arr)
+print("Running time for Selection Sort is \t" + str(exec_time*1000) + " ms")
+# Insertion Sort
+t_array = arr.copy
+begin = time.time()
+insertion_sort(arr)
+time.sleep(1)
+end = time.time()
+exec_time = end - begin
+print("Running time for Insertion Sort is \t" + str(exec_time*1000) + " ms")
