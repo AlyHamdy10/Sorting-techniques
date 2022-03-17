@@ -99,6 +99,10 @@ def generate_unsorted(size):
     return arr
 
 
+def print(str):
+    print(str)
+
+
 size = int(input("Enter te array's size:"))
 arr = generate_unsorted(size)
 # Quick Sort
