@@ -70,7 +70,7 @@ def merge_sort(arr, first, last):
 
 
 def insertion_sort(arr):
-    for i in range(1, 10):  # loop to compare each i'th element with all the elements before it
+    for i in range(1, len(arr)):  # loop to compare each i'th element with all the elements before it
         key = arr[i]  # i'th element being the key in the comparison
         hole = i  # current position of the key in the array after changes
         # while the hole is not the first element in the array and the previous is larger
