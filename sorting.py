@@ -99,7 +99,7 @@ def generate_unsorted(size):
     return arr
 
 
-size = int(input("Enter te array's size:"))
+size = int(input("Enter the array's size:"))
 arr = generate_unsorted(size)
 # Quick Sort
 t_array = arr.copy
