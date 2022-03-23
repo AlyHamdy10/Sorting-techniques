@@ -102,33 +102,33 @@ def generate_unsorted(size):
 size = int(input("Enter the array's size:"))
 arr = generate_unsorted(size)
 # Quick Sort
-t_array = arr.copy
+t_array = arr.copy()
 begin = time.time()
-quick_sort(arr, 0, size-1)
+quick_sort(t_array, 0, size-1)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
 print("Running time for Quick Sort is \t\t" + str(exec_time*1000) + " ms")
 # Merge Sort
-t_array = arr.copy
+t_array = arr.copy()
 begin = time.time()
-merge_sort(arr, 0, size-1)
+merge_sort(t_array, 0, size-1)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
 print("Running time for Merge Sort is \t\t" + str(exec_time*1000) + " ms")
 # Selection Sort
-t_array = arr.copy
+t_array = arr.copy()
 begin = time.time()
-selection_sort(arr)
+selection_sort(t_array)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
 print("Running time for Selection Sort is \t" + str(exec_time*1000) + " ms")
 # Insertion Sort
-t_array = arr.copy
+t_array = arr.copy()
 begin = time.time()
-insertion_sort(arr)
+insertion_sort(t_array)
 time.sleep(1)
 end = time.time()
 exec_time = end - begin
