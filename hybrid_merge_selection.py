@@ -38,7 +38,7 @@ def merge(arr, left, mid, right):
 
 def merge_sort(arr, first, last, threshold):
     if first < last:
-        if (last - first) < threshold:
+        if (last - first) < threshold:  # last - first + 1
             selection_sort(arr, first, last)
             return
         else:
@@ -68,7 +68,7 @@ def generate_unsorted(size):
     return arr
 
 
-size = int(input("Enter te array's size:"))
+size = int(input("Enter the array's size:"))
 arr = generate_unsorted(size)
 
 # hybrid merge selection sort
