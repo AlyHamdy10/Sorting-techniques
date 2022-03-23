@@ -1,6 +1,17 @@
 from random import randint
 
 
+def kth_element(arr, first, last, k):
+    while True:
+        pivot = random_pivot(arr, first, last)
+        if (pivot+1) == k:
+            return arr[pivot]
+        elif (pivot + 1) > k:
+            last = pivot - 1
+        else:
+            first = pivot + 1
+
+
 def random_pivot(arr, p, r):
     i = randint(p, r)
     arr[i], arr[r] = arr[r], arr[i]
@@ -23,6 +34,6 @@ k = int(input("Enter K"))
 arr = [6, 0, 7, 3, 1, 5, 9, 8, 4, 2]
 size = 10
 print(arr)
-print(partition(arr, 0, size-1, k))
+print(kth_element(arr, 0, size-1, k))
 arr.sort()
 print(arr)
