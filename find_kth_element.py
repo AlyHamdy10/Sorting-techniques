@@ -30,10 +30,17 @@ def partition(arr, p, r):
     return i + 1
 
 
-k = int(input("Enter K"))
-arr = [6, 0, 7, 3, 1, 5, 9, 8, 4, 2]
-size = 10
-print(arr)
-print(kth_element(arr, 0, size-1, k))
-arr.sort()
-print(arr)
+while True:
+    k = 0
+    size = 10
+    while k < 1 or k > size:
+        k = int(input("Enter K:  "))
+        if k < 1 or k > size:
+            print(">>>Out of bound<<<")
+    arr = [6, 0, 7, 3, 1, 5, 9, 8, 4, 2]
+    print(arr)
+    print(str(k) + "th smallest element is:\t" +
+          str(kth_element(arr, 0, size-1, k)))
+    arr.sort()
+    print(arr)
+    print()
