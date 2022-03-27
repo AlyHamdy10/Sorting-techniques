@@ -62,9 +62,9 @@ def selection_sort(arr, first, last):
 
 
 def generate_unsorted(size):
-    arr = [0] * size
+    arr = []
     for i in range(size):
-        arr[i] = randint(0, size)
+        arr.append(randint(0, size))
     return arr
 
 
